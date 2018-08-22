@@ -148,7 +148,7 @@ window下注入DApp.eos 实例， 实现eos.js的所有get请求
 
 ##### Parameters
 
-- `String`- 转账账号
+- `String`- 转账账号
 - `String`- 目标账号
 - `String`- 数量和单位
 - `String`- memo
@@ -223,7 +223,7 @@ window下注入DApp.enu 实例， 实现enu.js的所有get请求
 
 ##### Parameters
 
-- `String`- 转账账号
+- `String`- 转账账号
 - `String`- 目标账号
 - `String`- 数量和单位
 - `String`- memo
