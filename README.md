@@ -11,9 +11,16 @@ Javascript API for DApp.
     - [4. DApp.getCurrentWallet](#4-dappgetcurrentwallet)
     - [5. DApp.getWallets](#5-dappgetwallets)
 - [EOS](#eos)
+    - [Intro](#intro)
     - [1. DApp.eos.transaction()](#1-dappeostransaction)
+    - [2. DApp.eos.transfer()](#2-dappeostransfer)
 - [ETH](#eth)
+    - [Intro](#intro-1)
     - [1. DApp.web3.eth.sendTransaction()](#1-dappweb3ethsendtransaction)
+- [ENU](#enu)
+    - [Intro](#intro-2)
+    - [1. DApp.enu.transaction()](#1-dappenutransaction)
+    - [2. DApp.enu.transfer()](#2-dappenutransfer)
 
 <!-- /TOC -->
 
@@ -113,6 +120,8 @@ DApp.getWallets()
 
 ### EOS
 
+#### Intro
+
 window下注入DApp.eos 实例， 实现eos.js的所有get请求
 
 至少实现标准的 transaction 请求 
@@ -133,8 +142,29 @@ window下注入DApp.eos 实例， 实现eos.js的所有get请求
     - `transactionId` : `Stirng`
 - `msg`: `String`
 
+#### 2. DApp.eos.transfer()
+
+转底层币 EOS
+
+##### Parameters
+
+- `String`- 转账账号
+- `String`- 目标账号
+- `String`- 数量和单位
+- `String`- memo
+
+##### Returns
+
+`Object`:
+- `result`: `Boolean`
+- `data`: `Object`
+    - `transactionId` : `Stirng`
+- `msg`: `String`
+
 
 ### ETH
+
+#### Intro
 
 window下注入DApp.web3 实例, 实现web3.js的所有get请求
 
@@ -162,6 +192,49 @@ window下注入DApp.web3 实例, 实现web3.js的所有get请求
 - `msg`: `String`
 
 
+
+### ENU
+
+#### Intro
+
+window下注入DApp.enu 实例， 实现enu.js的所有get请求
+
+至少实现标准的 transaction 请求 
+
+#### 1. DApp.enu.transaction()
+
+##### Parameters
+
+`params`- `Object`:
+- `actions`: `Array`- Standard ENU actions
+- `address`: `String` - 可选 public key 作为身份区分 * 待讨论
+
+##### Returns
+
+`Object`:
+- `result`: `Boolean`
+- `data`: `Object`
+    - `transactionId` : `Stirng`
+- `msg`: `String`
+
+#### 2. DApp.enu.transfer()
+
+转底层币 ENU
+
+##### Parameters
+
+- `String`- 转账账号
+- `String`- 目标账号
+- `String`- 数量和单位
+- `String`- memo
+
+##### Returns
+
+`Object`:
+- `result`: `Boolean`
+- `data`: `Object`
+    - `transactionId` : `Stirng`
+- `msg`: `String`
 
 
 
